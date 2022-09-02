@@ -1,0 +1,49 @@
+.has-fade {
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden; //display none dosnt animate
+        opacity: 0;
+    }
+
+    1% {
+        //to switch quickly from visibility hidden to visible
+        visibility: visible;
+        opacity: 0;
+    }
+
+    // 50% {}
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards; //forwards means once anim complete it stays at the last animation 
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        //to make it visible most of animation time
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
+}

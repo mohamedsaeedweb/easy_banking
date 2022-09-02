@@ -1,0 +1,61 @@
+.feature {
+    background-color: $lightGrayisgBlue;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        text-align: left;
+    }
+
+    &__intro {
+        margin-bottom: 3.75rem;
+
+        @include breakpoint-up(large) {
+            width: 60%;
+        }
+    }
+
+    &__grid {
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap; // to make items wrap in 2 rows
+        }
+    }
+
+    &__item {
+        padding: .9375rem; // if use margin the second item in tablet will have extra space from right (2colums 2 rows)
+
+        @include breakpoint-up(medium) {
+            flex: 0 0 50%; // grow shrink basis(initial main size of each item)
+        }
+
+        @include breakpoint-up(large) {
+            flex: 1;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2.75rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.25rem; //20px font-weight: 300;
+        font-weight: 300;
+        line-height: 1.15;
+        color: $darkBlue;
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(large) {
+            font-size: 1.5rem; //24px
+            margin-bottom: 1.5rem; //34px
+        }
+    }
+
+    &__description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+}
